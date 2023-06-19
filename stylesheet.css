@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+}
+body{
+    background-color: hsl(30, 38%, 92%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sr-only {
+    position: absolute;
+    left: -9999;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+main{
+    width: 654px;
+    height: 500px;
+    background-color: white;
+    position: relative;
+    border-radius: 10px;
+}
+
+img {
+    width: 327px;
+    height: 500px;
+    position: absolute;
+    left:0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.product{
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    left: 362px;
+    color: #787a86;
+    top: 32px;
+    font-size: 0.875rem;
+    letter-spacing: 4px;
+}
+
+.name{
+    font-family: 'Fraunces', serif;
+    position: absolute;
+    left: 362px;
+    color: black;
+    top: 77px;
+    width: 199px;
+    height: 115px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.product-info{
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    left: 362px;
+    top: 226px;
+    width: 256px;
+    height: 97px;
+    color: hsl(228, 12%, 48%);
+    line-height: 1.5;
+}
+
+.price-after {
+    font-family: 'Fraunces', serif;
+    position: absolute;
+    left: 362px;
+    color: #40836c;
+    top: 351px;
+    width: 133px;
+    height: 40px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.price-before {
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    left: 520px;
+    color: hsl(228, 12%, 48%);
+    top: 362px;
+    width: 133px;
+    height: 40px;
+    font-size: 15px;
+    text-decoration: line-through;
+}
+
+.button{
+    position: absolute;
+    left: 362px;
+    background-color: #40836c;
+    top: 416px;
+    width: 233px;
+    height: 53px;
+    border-radius: 10px;
+}
+
+.ico{
+    top: 16px;
+    left: 60px;
+    position: absolute;
+    width: 15px;
+    height: 16px;
+} 
+.button-n{
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 17px;
+    color: white;
+    font-size: 0.875rem;
+    left: 84px;
+}
+
+.button:hover{
+    background-color: #194131;
+}
+
+.attribution{
+    position: absolute;
+    bottom: -41px;
+    left: 142px;
+}
