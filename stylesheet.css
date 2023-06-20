@@ -9,14 +9,32 @@ body{
     align-items: center;
 }
 
-.sr-only {
-    position: absolute;
-    left: -9999;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
+/* montserrat-500 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    src: url('fonts/montserrat-v25-latin-500.woff2') format('woff2');
 }
 
+/* montserrat-700 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: url('fonts/montserrat-v25-latin-700.woff2') format('woff2');
+}
+
+/* Fraunces-700 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 700;
+    src: url('fonts/fraunces-v31-latin-700.woff2') format('woff2');
+}
 main{
     width: 654px;
     height: 500px;
@@ -91,7 +109,7 @@ img {
     text-decoration: line-through;
 }
 
-.button{
+/* button{
     position: absolute;
     left: 362px;
     background-color: #40836c;
@@ -99,25 +117,35 @@ img {
     width: 233px;
     height: 53px;
     border-radius: 10px;
+    border-width: 0;
+} */
+
+button{
+    position: absolute;
+    left: 362px;
+    background-color: #40836c;
+    top: 416px;
+    width: 233px;
+    height: 53px;
+    border-radius: 10px;
+    border-width: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 0.875rem;
+    padding-left: 24px;
 }
 
+
 .ico{
-    top: 16px;
-    left: 60px;
+    top: 17px;
+    left: 63px;
     position: absolute;
     width: 15px;
     height: 16px;
 } 
-.button-n{
-    font-family: 'Montserrat', sans-serif;
-    position: absolute;
-    top: 17px;
-    color: white;
-    font-size: 0.875rem;
-    left: 84px;
-}
 
-.button:hover{
+
+button:hover{
     background-color: #194131;
 }
 
