@@ -1,5 +1,10 @@
 *{
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+}
+h1[aria-label]{
+    display: none;
 }
 body{
     background-color: hsl(30, 38%, 92%);
@@ -7,6 +12,143 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+main{
+    width: 588px;
+    height: 450px;
+    background-color: white;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(294px, 1fr));
+}
+.content{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    padding: 13px 30px;
+}
+.prices{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+img+img{
+    display: none;
+}
+
+.product{
+    font-family: 'Montserrat', sans-serif;
+    color: #787a86;
+    font-size: 0.875rem;
+    letter-spacing: 4px;
+}
+
+.name{
+    font-family: 'Fraunces', serif;
+    color: black;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.product-info{
+    font-family: 'Montserrat', sans-serif;
+    color: hsl(228, 12%, 48%);
+    line-height: 1.5;
+}
+
+.price-after {
+    font-family: 'Fraunces', serif;
+    color: #40836c;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.price-before {
+    font-family: 'Montserrat', sans-serif;
+    color: hsl(228, 12%, 48%);
+    font-size: 15px;
+    text-decoration: line-through;
+}
+
+
+button{
+    background-color: #40836c;
+    width: 233px;
+    height: 53px;
+    border-radius: 10px;
+    border-width: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 0.875rem;
+    padding-left: 24px;
+}
+
+
+.ico{
+    width: 15px;
+    height: 16px;
+} 
+
+
+button:hover{
+    background-color: #194131;
+}
+
+.attribution{
+    margin-top: 50px;
+}
+@media (max-width: 602px){
+    main {
+            height: 588px;
+            width: 327px;
+            background-color: white;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            flex-flow: column wrap;
+        }
+    h1+img{
+        display: none;
+    }
+    img+img{
+        display: block;
+        width: 100%;
+        height: 38%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+    .content{
+        padding: 15px 20px;
+        height: 62%;
+    }
+    .name{
+        font-size: 28px;
+    }
+    .product-info{
+        font-size: 14px;
+    }
+    .prices{
+        width: 73%;
+    }
+    button{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 24px;
+    }
+    svg{
+        margin-right: 10px;
+    }
 }
 
 /* montserrat-500 - latin */
@@ -34,123 +176,4 @@ body{
     font-style: normal;
     font-weight: 700;
     src: url('fonts/fraunces-v31-latin-700.woff2') format('woff2');
-}
-main{
-    width: 654px;
-    height: 500px;
-    background-color: white;
-    position: relative;
-    border-radius: 10px;
-}
-
-img {
-    width: 327px;
-    height: 500px;
-    position: absolute;
-    left:0;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-}
-
-.product{
-    font-family: 'Montserrat', sans-serif;
-    position: absolute;
-    left: 362px;
-    color: #787a86;
-    top: 32px;
-    font-size: 0.875rem;
-    letter-spacing: 4px;
-}
-
-.name{
-    font-family: 'Fraunces', serif;
-    position: absolute;
-    left: 362px;
-    color: black;
-    top: 77px;
-    width: 199px;
-    height: 115px;
-    font-size: 32px;
-    font-weight: 700;
-}
-
-.product-info{
-    font-family: 'Montserrat', sans-serif;
-    position: absolute;
-    left: 362px;
-    top: 226px;
-    width: 256px;
-    height: 97px;
-    color: hsl(228, 12%, 48%);
-    line-height: 1.5;
-}
-
-.price-after {
-    font-family: 'Fraunces', serif;
-    position: absolute;
-    left: 362px;
-    color: #40836c;
-    top: 351px;
-    width: 133px;
-    height: 40px;
-    font-size: 32px;
-    font-weight: 700;
-}
-
-.price-before {
-    font-family: 'Montserrat', sans-serif;
-    position: absolute;
-    left: 520px;
-    color: hsl(228, 12%, 48%);
-    top: 362px;
-    width: 133px;
-    height: 40px;
-    font-size: 15px;
-    text-decoration: line-through;
-}
-
-/* button{
-    position: absolute;
-    left: 362px;
-    background-color: #40836c;
-    top: 416px;
-    width: 233px;
-    height: 53px;
-    border-radius: 10px;
-    border-width: 0;
-} */
-
-button{
-    position: absolute;
-    left: 362px;
-    background-color: #40836c;
-    top: 416px;
-    width: 233px;
-    height: 53px;
-    border-radius: 10px;
-    border-width: 0;
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    font-size: 0.875rem;
-    padding-left: 24px;
-}
-
-
-.ico{
-    top: 17px;
-    left: 63px;
-    position: absolute;
-    width: 15px;
-    height: 16px;
-} 
-
-
-button:hover{
-    background-color: #194131;
-}
-
-.attribution{
-    position: absolute;
-    bottom: -41px;
-    left: 142px;
 }
